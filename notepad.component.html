@@ -1,0 +1,59 @@
+<p>notepad works!</p>
+<style>
+ 
+  div {
+    background-color: skyblue;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  
+  h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+ 
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+  }
+</style>
+<div>
+  <h2>Create a New Note</h2>
+  <form (submit)="addNote()">
+    <textarea [(ngModel)]="newNote" placeholder="Enter your note"></textarea>
+    <button type="submit">Add Note</button>
+  </form>
+  <p *ngIf="currentDate">Current Date and Time: {{ currentDate }}</p>
+</div>
